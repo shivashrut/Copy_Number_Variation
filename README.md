@@ -19,14 +19,12 @@ pip install numpy sklearn pysam matplotlib
 
 
 ## Running
-CNVEM requires two input files, a bam file after sort and a reference folder,
-the folder contains the reference sequence for each chromosome of the bam file.
+CNVEM requires two input files, a bam file after sort and a reference folder, the folder contains the reference sequence for each chromosome of the bam file.
 
-Note: at present, the method only supports single chromosome samples
-The whole genomes can be detected by batch file
+Note: At present, the method only supports single-chromosome samples. The whole genomes can be detected by batch file.
 
-### runnig command
-python CNVEM.py [reference] [bamfile] [binSize] [chrom]
+### Runnig command
+python3 CNVEM.py [reference] [bamfile] [binSize] [output] [chrom]
 
 [reference]: the reference folder path
 
@@ -34,9 +32,9 @@ python CNVEM.py [reference] [bamfile] [binSize] [chrom]
 
 [binSize]: the window size ('1000'by default)
 
+[output]: output file with CN
+
 [chrom]: Chromosome number. (Eg. '17')
 
-### run the default example
-python CNVEM.py ./reference/ ./test.sort.bam 1000 ./output/ 21
-
-Finally, the result files will be generated in the folder called './output/'.
+### Run the default example
+python CNVEM.py .fastq .bam 1000 .output 21
